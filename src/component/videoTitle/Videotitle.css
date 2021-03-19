@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap");
+
+.filmInfo {
+  width: 150px;
+  text-align: center;
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+}
+
+.filmTitle {
+  color: #ffffff;
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+}
+
+.filmStyle,
+.filmGrade {
+  font-family: "Rambla", sans-serif;
+  color: #b171d9;
+}
+
+.filmStyle {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.filmGrade {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.onTen {
+  color: #ffffff;
+}
+
+.imageFilm {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  border-radius: 20px;
+}
