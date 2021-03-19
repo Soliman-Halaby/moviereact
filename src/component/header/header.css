@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  height: 300px;
+  background: rgba(220, 20, 60, 0.05);
+}
+
+.headerContainer {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+  height: 150px;
+  padding: 20px 20px 0;
+  box-sizing: border-box;
+
+  border-bottom: 2px solid #ffffff;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.iconLoupe {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
