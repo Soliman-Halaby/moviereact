@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header
-          note="Recherche"
+          note="Recherche moi"
         />
     </div>
   );
