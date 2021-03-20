@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap");
 
 .filmInfo {
-  width: 150px;
+  width: 190px;
   text-align: center;
   display: flex;
   margin: 10px;
@@ -36,8 +36,8 @@
 }
 
 .imageFilm {
-  width: 150px;
+  width: 190px;
   height: auto;
   margin: 10px;
-  border-radius: 20px;
+  border-radius: 5ppx;
 }
