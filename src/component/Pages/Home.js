@@ -5,7 +5,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css'
 
 import "./Home.css";
-import Gallery from "./gallery.js";
+import Carousel from "./gallery.js";
 
 
 export default function Home() {
@@ -15,7 +15,8 @@ export default function Home() {
       <div className="filmPart">
         <span className="titleCategorie">Nouveauté</span>
         <div className="videoWrapper">
-        <Gallery  />
+        <Carousel  /> 
+        {/* carousel is the alice carousel component */}
         </div>
       </div>
       <div className="filmPart">

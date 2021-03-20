@@ -13,8 +13,14 @@ const responsive = {
 const items = [
   <Videotitle onDragStart={handleDragStart} />,
   <Videotitle onDragStart={handleDragStart} />,
+  <Videotitle onDragStart={handleDragStart} />,
+  <Videotitle onDragStart={handleDragStart} />,
+  <Videotitle onDragStart={handleDragStart} />,
+  <Videotitle onDragStart={handleDragStart} />,
+  <Videotitle onDragStart={handleDragStart} />,
+  <Videotitle onDragStart={handleDragStart} />,
   <Videotitle onDragStart={handleDragStart} />
-  
+  //Videotitle component is stored in the carousel
 ];
 const Carousel = () => (
     <AliceCarousel
@@ -23,10 +29,6 @@ const Carousel = () => (
         responsive={responsive}
     />
 );
-const Gallery = () => {
-  return (
-    <AliceCarousel mouseTracking items={items} />
-  );
-}
-export default Gallery;
+
+export default Carousel;
 
