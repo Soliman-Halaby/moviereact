@@ -1,8 +1,12 @@
 import React from "react";
 import Header from "../header/header";
 import Videotitle from "../videoTitle/Videotitle";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css'
 
 import "./Home.css";
+import Gallery from "./gallery.js";
+
 
 export default function Home() {
   return (
@@ -11,14 +15,7 @@ export default function Home() {
       <div className="filmPart">
         <span className="titleCategorie">Nouveauté</span>
         <div className="videoWrapper">
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
+        <Gallery  />
         </div>
       </div>
       <div className="filmPart">
