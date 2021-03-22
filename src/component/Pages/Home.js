@@ -3,10 +3,9 @@ import Header from "../header/header";
 import Videotitle from "../videoTitle/Videotitle";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css'
-
 import "./Home.css";
 import Carousel from "./gallery.js";
-
+import Footer from  '../Footer/footer.js'
 
 export default function Home() {
   return (
@@ -45,6 +44,8 @@ export default function Home() {
           <Videotitle />
         </div>
       </div>
+      <Footer />
     </div>
+    
   );
 }
