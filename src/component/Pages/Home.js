@@ -5,7 +5,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css'
 import "./Home.css";
 import Carousel from "./gallery.js";
-import Footer from  '../Footer/footer.js'
+import Footer from  '../footer/footer.js'
 
 export default function Home() {
   return (
