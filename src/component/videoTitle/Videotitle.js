@@ -7,6 +7,7 @@ export default function Videotitle(props) {
     <div className="videoTitleContainer">
       <div className="filmInfo">
         <img
+          draggable="false"
           alt="Film Informations"
           className="imageFilm"
           src={imageFilm}
