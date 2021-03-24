@@ -8,7 +8,7 @@ import useGetFilm from "./hooks/useMyApi";
 
 
 function App() {
-  const useGetFilms = useGetFilm();
+  const useGetFilms = useGetFilm("Avengers");
 
   return (
     <Router>
