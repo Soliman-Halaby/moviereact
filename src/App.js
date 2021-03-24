@@ -3,13 +3,14 @@ import Header from "./component/header/header";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Routes from "./Routes";
-import useGetFilm from "./hooks/useMyApi";
+import useGetFilm from "./hooks/useGetFilm";
+import getPopularMovie from "./hooks/getPopularMovie";
 
 
 
 function App() {
-  const useGetFilms = useGetFilm("Avengers");
-
+  const useGetFilms = useGetFilm("pulp+fiction");
+  // const getPopularMovies = getPopularMovie();
   return (
     <Router>
       <div className="App">
