@@ -1,5 +1,4 @@
 import React from "react";
-import imageFilm from "../../assets/images/lucifer.jpeg";
 import "./Videotitle.css";
 
 export default function Videotitle(props) {
@@ -8,14 +7,14 @@ export default function Videotitle(props) {
       <div className="filmInfo">
         <img
           draggable="false"
-          alt="Film Informations"
+          alt={props.alt}
           className="imageFilm"
-          src={imageFilm}
+          src={props.src}
         ></img>
-        <span className="filmTitle">DeadPool</span>
-        <span className="filmStyle">Action</span>
-        <span className="filmGrade">
-          7.4<span className="onTen">/10</span>
+        <span className="filmTitle">{props.filmTitle}</span>
+        <span className="filmStyle">{props.filmStyle}</span>
+        <span className="filmGrade">{props.filmGrade}
+          <span className="onTen">{props.onTen}</span>
         </span>
       </div>
     </div>
