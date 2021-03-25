@@ -21,10 +21,10 @@ export default class Rating extends React.Component {
     starRate(grade) {
         const items = [];
         let rate = grade
-        if( rate == 0) {
+        if( rate === 0) {
             for (let i = 0; i < 5; i++) {
                 items.push (
-                    <img className= 'staroflife' src= {staroflife}></img>
+                    <img className= 'staroflife' src= {staroflife} alt="not rated"></img>
                 )           
             }
         } else {
@@ -32,18 +32,17 @@ export default class Rating extends React.Component {
                 console.log(rate);
                 if(rate >= 1) {
                     items.push (
-                        <img className= 'star' src= {starsolid}></img>
+                        <img className= 'star' src= {starsolid} alt="full star"></img>
                     )
                     rate = rate - 1;
-                } else if (rate == 0.5) {
+                } else if (rate === 0.5) {
                     rate = 0;
                     items.push (
-                        <img className= 'star' src= {starhalf}></img>
+                        <img className= 'star' src= {starhalf} alt="half star"></img>
                     )
                 } else {
-                    console.log("pute");
                     items.push (
-                        <img className= 'star' src= {starregular}></img>
+                        <img className= 'star' src= {starregular} alt="empty star"></img>
                     )
                 }
             }

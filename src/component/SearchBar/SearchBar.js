@@ -31,7 +31,6 @@ class SearchBar extends React.Component {
                     placeholder="Name"
                     id="name"
                     name="search"
-                    type="text"
                     onChange={this.changeSearchStatement}
                     ></input>
                 </div>
