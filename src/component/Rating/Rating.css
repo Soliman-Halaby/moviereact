@@ -1,0 +1,25 @@
+.starContainer {
+  display: flex;
+  justify-content: center;
+  /* height: 30px; */
+}
+
+.star {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+}
+
+.staroflife {
+  width: 10px;
+  height: 15px;
+  margin: 0 7px 0 8px;
+}
+
+/* .starContainer div {
+  background: crimson;
+  border-radius: 5px;
+  width: 30px;
+  margin: 5px;
+  height: 30px;
+} */
