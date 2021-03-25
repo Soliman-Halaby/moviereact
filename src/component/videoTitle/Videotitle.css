@@ -22,33 +22,8 @@ img {
   text-align: center;
   display: flex;
   margin: 10px;
+  display: flex;
   flex-direction: column;
-}
-
-.filmTitle {
-  color: #ffffff;
-  font-family: "Righteous", cursive;
-  font-size: 25px;
-}
-
-.filmStyle,
-.filmGrade {
-  font-family: "Rambla", sans-serif;
-  color: #b171d9;
-}
-
-.filmStyle {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.filmGrade {
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.onTen {
-  color: #ffffff;
 }
 
 .imageFilm {
@@ -56,4 +31,52 @@ img {
   height: auto;
   margin: 10px;
   border-radius: 10px;
+}
+
+.filmInfo .center {
+  display: flex;
+  justify-content: center;
+}
+
+.filmInfo .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+}
+
+.filmTitle {
+  color: #ffffff;
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  min-height: 65px;
+}
+
+.filmStyle,
+.filmGrade {
+  display: flex;
+  font-family: "Rambla", sans-serif;
+  color: #b171d9;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filmStyle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.rateText {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.rateText span:first-child {
+  color: #b171d9;
 }

@@ -1,5 +1,8 @@
 import React from "react";
 import "./Videotitle.css";
+import Rating from "../Rating/Rating"
+
+const rate = 6
 
 export default function Videotitle(props) {
   return (
@@ -11,11 +14,20 @@ export default function Videotitle(props) {
           className="imageFilm"
           src={props.src}
         ></img>
-        <span className="filmTitle">{props.filmTitle}</span>
-        <span className="filmStyle">{props.filmStyle}</span>
-        <span className="filmGrade">{props.filmGrade}
-          <span className="onTen">{props.onTen}</span>
-        </span>
+        <div class="infos center">
+          <span className="filmTitle center">{props.filmTitle}</span>
+          <div class="subcontainer">
+            <span className="filmStyle center">{props.filmStyle}</span>
+            <Rating 
+              rate= {props.filmGrade}
+              diviser = {10}
+            />
+            <span className="rateText">
+              <span>{props.filmGrade}</span>
+              <span>/10</span>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );
