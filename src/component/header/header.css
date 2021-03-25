@@ -1,3 +1,29 @@
+/****** RESET BUTTON CSS *******/
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
 .header {
   width: 100%;
   height: 300px;
@@ -27,6 +53,7 @@
   display: flex;
   justify-content: center;
 }
+
 .logo {
   width: 100px;
   margin-top: 25px;
@@ -98,6 +125,10 @@
     flex-direction: row;
   }
 
+  .element {
+    height: 30px;
+    font-size: 10px;
+  }
   .inputContainer {
     margin-left: 35px;
     display: flex;
@@ -114,30 +145,4 @@
     height: 55%;
     display: flex;
   }
-}
-
-/****** RESET BUTTON CSS *******/
-
-button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-
-  background: transparent;
-
-  /* inherit font & color from ancestor */
-  color: inherit;
-  font: inherit;
-
-  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-  line-height: normal;
-
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-
-  /* Corrects inability to style clickable `input` types in iOS */
-  -webkit-appearance: none;
 }
