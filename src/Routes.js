@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Home from "./component/Pages/Home";
 import Film from "./component/Pages/Film";
+import Home from "./component/Pages/Home";
 
 export default function Router() {
   return (
