@@ -1,4 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rambla&family=Righteous&display=swap');
+
+.container{
+    margin-top:-50px;
+}
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    
+}
 .trailer{
     width: 100%;
     height: auto;
+}
+.svgButton{
+    position: absolute;
+    left:45%;
+    top:45%;
+}
+.svgButton:hover{
+    cursor: pointer;
+    /* transform: scale(1.05);
+    transition: linear 0.2s; */
+}
+.description{
+    width:35vw;
+    height:55vh;
+    border: 1px solid black;
+    color:white;
+    position:absolute;
+    top:65%;
+    left: 5%;
+}
+.filmTitle{
+     font-size: 144px; 
+     font-family: 'Righteous', sans-serif;
+    margin-top:-40px; 
+    color:red;
+}
+.genre{
+    font-family: 'Rambla', sans-serif;
+    color:#B171D9;
+    font-size:37px;
+    margin-top: -130px;
+}
+.infos{
+    font-family: 'Rambla', sans-serif;
+    width:150px;
+    display: flex;
+    justify-content: space-around;
+    margin-top:-35px;
+}
+.year{
+    font-weight: bold;
+    font-size:22px;
+    margin-left:-15px; 
+    margin-top:2px;  
+}
+.length{
+    font-size:12px;
+    margin-top:9px;
+}
+.descriptionText{
+    font-family: 'Rambla', sans-serif;
 }

@@ -35,7 +35,9 @@ class SearchBar extends React.Component {
                     ></input>
                 </div>
             </div>
+            
         </React.Fragment>
+        
         
       )
     }
