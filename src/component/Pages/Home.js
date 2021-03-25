@@ -1,12 +1,9 @@
 import React from "react";
 import Header from "../header/header";
 import Videotitle from "../videoTitle/Videotitle";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
 import "./Home.css";
-import Carousel from "./gallery.js";
 import Footer from "../Footer/footer";
-import Movie from "./Movie"
+import Popular from "./PopularMovie"
 
 export default function Home() {
   return (
@@ -15,8 +12,6 @@ export default function Home() {
       <div className="filmPart">
         <span className="titleCategorie">Nouveauté</span>
         <div className="videoWrapper">
-          <Movie />
-          {/* carousel is the alice carousel component */}
         </div>
       </div>
       <div className="filmPart">
@@ -35,14 +30,7 @@ export default function Home() {
       <div className="filmPart">
         <span className="titleCategorie">Populaire</span>
         <div className="videoWrapper">
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
+          <Popular />
         </div>
       </div>
       <Footer />
