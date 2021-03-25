@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../header/header";
-import Videotitle from "../videoTitle/Videotitle";
 import Footer from "../Footer/footer";
-import Popular from "./PopularMovie"
+import Popular from "./PopularMovies"
+import Top from "./TopMovies"
+import Latest from "./LatestMovies"
 import "./Home.css";
 
 export default function Home() {
@@ -11,20 +12,14 @@ export default function Home() {
       <Header />
       <div className="filmPart">
         <span className="titleCategorie">Nouveauté</span>
+          <Latest />
         <div className="videoWrapper">
         </div>
       </div>
       <div className="filmPart">
         <span className="titleCategorie">Top 10</span>
         <div className="videoWrapper">
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
-          <Videotitle />
+          <Top />
         </div>
       </div>
       <div className="filmPart">
