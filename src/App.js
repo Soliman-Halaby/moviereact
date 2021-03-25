@@ -9,14 +9,12 @@ import getPopularMovie from "./hooks/getPopularMovie";
 
 
 function App() {
-  const useGetFilms = useGetFilm("pulp+fiction");
-  // const getPopularMovies = getPopularMovie();
+  // const useGetFilms = useGetFilm("pulp+fiction");
   return (
     <Router>
       <div className="App">
         <Routes />
       </div>
-      <p>{useGetFilms}</p>
     </Router>
   );
 }

@@ -3,9 +3,11 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Videotitle from "../videoTitle/Videotitle";
 import imageFilm from "../../assets/images/lucifer.jpeg";
+import getPopularMovie from "../../hooks/getPopularMovie";
+import Movie from "./Movie"
 
 // alice carousel doc here : https://github.com/maxmarinich/react-alice-carousel
-const handleDragStart = (e) => e.preventDefault();
+export const handleDragStart = (e) => e.preventDefault();
 const responsive = {
     0: { items: 1 },
     500: { items: 2 },
@@ -19,21 +21,7 @@ const responsive = {
     2200: { items: 10 }, 
 };
 
-const  myApilength = 10
-
-const items = [];
-for (var i = 0; i < myApilength; i++) {
-  items.push(
-  <Videotitle
-    onDragStart={handleDragStart} 
-    src= {imageFilm}
-    alt= "Film Informations"
-    filmTitle= "DeadPool"
-    filmStyle= "Action"
-    filmGrade= "7.4"
-    onTen= "/10"
-    />
-  )}
+export const items = [];
 
   //Videotitle component is stored in the carousel
 const Carousel = () => ( // any modification of the alice carousel goes here

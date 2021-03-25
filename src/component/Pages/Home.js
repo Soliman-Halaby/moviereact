@@ -6,6 +6,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import "./Home.css";
 import Carousel from "./gallery.js";
 import Footer from "../Footer/footer";
+import Movie from "./Movie"
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <div className="filmPart">
         <span className="titleCategorie">Nouveauté</span>
         <div className="videoWrapper">
-          <Carousel />
+          <Movie />
           {/* carousel is the alice carousel component */}
         </div>
       </div>
