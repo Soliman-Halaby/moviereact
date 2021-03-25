@@ -17,6 +17,14 @@ img {
   user-select: none;
 }
 
+
+.videoTitleContainer {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+
 .filmInfo {
   width: 190px;
   text-align: center;
@@ -24,13 +32,15 @@ img {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .imageFilm {
   width: 190px;
   height: auto;
-  margin: 10px;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .filmInfo .center {
@@ -39,6 +49,7 @@ img {
 }
 
 .filmInfo .infos {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,7 +59,7 @@ img {
 .filmTitle {
   color: #ffffff;
   font-family: "Righteous", cursive;
-  font-size: 25px;
+  font-size: 20px;
   min-height: 65px;
 }
 
@@ -80,3 +91,5 @@ img {
 .rateText span:first-child {
   color: #b171d9;
 }
+
+

@@ -16,7 +16,7 @@ export default function Filmdisplay(props) {
                     <img className="svgButton" src={svgSrc}/>
                 </div>
                 <div className="description">
-                        <h1 className="filmTitle">Joker</h1>
+                        <h1 className="filmTitle1">Joker</h1>
                         <h2 className="genre">Thriller</h2>
                         <div className="infos">
                             <p className="year">2019</p>
