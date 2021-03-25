@@ -1,13 +1,10 @@
-import Videotitle from "./component/videoTitle/Videotitle";
-import Header from "./component/header/header";
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./Routes";
+import "./App.css";
 
 
 
 function App() {
-  // const useGetFilms = useGetFilm("pulp+fiction");
   return (
     <Router>
       <div className="App">

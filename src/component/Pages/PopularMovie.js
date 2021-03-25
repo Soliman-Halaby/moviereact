@@ -1,7 +1,7 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 import Videotitle from "../videoTitle/Videotitle";
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 
 export default class Popular extends React.Component {
@@ -53,7 +53,7 @@ export default class Popular extends React.Component {
     }
 
     fetchMovies() {
-        const { isLoading, movies, tab_len} = this.state;
+        const {isLoading} = this.state;
 
         if (isLoading) {
             fetch(`https://api.themoviedb.org/3/movie/popular` , {
@@ -79,7 +79,7 @@ export default class Popular extends React.Component {
 
     modifyCarousel(items) {
         const handleDragStart = (e) => e.preventDefault();
-        const { movies, tab_len, isLoading } = this.state;
+        const {movies, tab_len} = this.state;
 
         for (let i = 0; i < tab_len; i++) {
             const movie = movies[i];

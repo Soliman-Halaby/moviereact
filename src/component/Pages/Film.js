@@ -12,8 +12,8 @@ function Film() {
     <div className="containerFilm">
       <Header />
       <Videodisplay
-      videoSrc = {video1}/>
-    // 
+      videoSrc = {video1}
+      />
     </div>
   );
 }

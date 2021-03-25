@@ -3,7 +3,7 @@ import "./header.css";
 import "./input.css";
 import Logo from "../../assets/logos/logo.svg";
 import Loupe from "../../assets/logos/loupe.svg";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 // import logo from '../../assets/logos/logo.png;';
 // import iconHeart from './images/heart-red.svg';

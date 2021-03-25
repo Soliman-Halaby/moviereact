@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "../header/header";
 import Videotitle from "../videoTitle/Videotitle";
-import "./Home.css";
 import Footer from "../Footer/footer";
 import Popular from "./PopularMovie"
+import "./Home.css";
 
 export default function Home() {
   return (
