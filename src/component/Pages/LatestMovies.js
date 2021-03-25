@@ -83,14 +83,10 @@ export default class Latest extends React.Component {
 
         for (let i = 0; i < tab_len; i++) {
             const movie = movies[i];
-            console.log(movie);
             const movie_title = movie['original_title'];
             const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path'];
-            let movie_grade = "NR";
+            let movie_grade = movie['vote_average'];
 
-            if(movie['vote_average'] !== 0) {
-                movie_grade = movie['vote_average'];
-            }
             items.push(
                 <Videotitle
                     onDragStart={handleDragStart} 
