@@ -20,7 +20,10 @@ export default class Latest extends React.Component {
         const {isLoading} = this.state;
         const responsive = {
             0: { items: 1 },
-            500: { items: 2 },
+            340: { items: 1},
+            350: { items: 1.7 },
+            420: { items: 1.9 },
+            500: { items: 1.9 },
             700: { items: 3 },
             900: { items: 4 }, // number of items per resolution 
             1100: { items: 5 }, 
@@ -30,6 +33,23 @@ export default class Latest extends React.Component {
             2000: { items: 9 }, 
             2200: { items: 10 }, 
         };
+
+        // const respObj = [];
+        // const respItems = 1.7
+        // const respKey = 350
+        // const respLimite = 3000
+        // const restStep = 50
+
+        // for ( var i=0; i<(respLimite/restStep); i++ ) {
+        //     const key3 = respKey + (i*((respLimite-respItems)/restStep))
+        //     var obj = {};
+
+        //     obj[key3] = "value3";
+        //     respObj.push(obj);
+        //     console.log(respObj);
+        // }
+       ; 
+    // }
         const items = [];
 
         if (!isLoading) {
