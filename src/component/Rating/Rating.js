@@ -9,7 +9,7 @@ import staroflife from "../../assets/icons/star-of-life-solid.svg";
 export default class Rating extends React.Component {
   render() {
     const rate = Math.round((this.props.rate / 2) * 2) / 2;
-    const position = this.props;
+    // const position = this.props;
     return (
       <React.Fragment>
         <div className={this.props.position}>{this.starRate(rate)}</div>
@@ -34,7 +34,6 @@ export default class Rating extends React.Component {
           rate = 0;
           items.push(<img className="star" src={starhalf}></img>);
         } else {
-          console.log("pute");
           items.push(<img className="star" src={starregular}></img>);
         }
       }
