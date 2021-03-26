@@ -14,7 +14,6 @@ export default class Film extends React.Component {
     overview: "",
     genres: "",
     urlSrc: "",
-    movieId: 0
   };
 
   componentDidMount() {
@@ -44,6 +43,7 @@ export default class Film extends React.Component {
         .then((res) => res.json())
         .then((res) => {
           const genresTab = res.genres[0];
+          console.log(genresTab.name);
           this.setState({
             title: res.original_title,
             imgPath: imgPath + res.backdrop_path,
@@ -53,7 +53,6 @@ export default class Film extends React.Component {
             overview: res.overview,
             genres: genresTab.name,
             urlSrc: res.homepage,
-            movieId: res.id
           });
         })
         .catch((error) => {
@@ -73,7 +72,6 @@ export default class Film extends React.Component {
       overview,
       genres,
       urlSrc,
-      movieId
     } = this.state;
     return (
       <Filmdisplay
@@ -85,7 +83,6 @@ export default class Film extends React.Component {
         overview={overview}
         genres={genres}
         urlSrc={urlSrc}
-        movieId={movieId}
       />
     );
   }
