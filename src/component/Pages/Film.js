@@ -5,21 +5,88 @@ import "./Film.css";
 // import video1 from "../../assets/videos/banana.mp4";
 import image from "../../assets/images/image.png";
 import play from "../../assets/logos/play.svg";
+import FilmImage from "../../assets/images/image.png";
 
 
 
-function Film(props) {
-  const propsId = props.filmId
-  console.log(propsId['movieId']);
-  const About =(props) => {
-    console.log("aboutRB",props.location.filmName);
+export default class Film extends React.Component {
+  state = {
+    isLoading: true,
+    propsId: this.props.filmId,
+    imgPath: "",
+    runtime: 0,
+    voteAve: 0,
+    releasedYear: 6666,
+    overview: "",
+    genres: "",
+    urlSrc: ""
   }
-  return (
-    <div className="containerFilm">
-      {/* <Header /> */}
-      <Filmdisplay />
-    </div>
-  );
+
+  componentDidMount() {
+    this.fetchMovies();
+  }
+
+  render() {
+    const { propsId } = this.state
+    console.log(propsId['movieId']);
+    return (
+      <React.Fragment>
+        {this.modifyDisplay()}
+      </React.Fragment>
+    );
+  }
+
+  fetchMovies() {
+    const { isLoading, propsId } = this.state;
+
+    if (isLoading) {
+        
+        const apiName = "https://api.themoviedb.org/3/movie/" + propsId['movieId'];
+        const imgPath = "https://image.tmdb.org/t/p/original/"
+
+        fetch(apiName , {
+            methods: "GET",
+            headers: {
+                Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MmVmMTQxMTBkNmZiYzE3NDE0MTUzMzY1ZTE4NWI4MSIsInN1YiI6IjYwNTM2MDNkMGUyOWEyMDA3MzZkOGM0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K2zbw8Xr4ylJN8uZxwoYHxzx9R2d9SuZFpgDLVRIo6c",
+                "Content-Type": "application/json;charset=utf-8"
+            }}).then(res => res.json())
+            .then(res => {
+                const genresTab = res.genres[0]
+                console.log(genresTab.name);
+                this.setState({
+                  title: res.original_title,
+                  imgPath: imgPath + res.backdrop_path,
+                  runtime: res.runtime,
+                  voteAve: res.vote_average,
+                  releasedYear: res.release_date.substring(0, 4),
+                  overview: res.overview,
+                  genres: genresTab.name,
+                  urlSrc: res.homepage
+                })
+            }).catch(error => {
+                // this.setState({
+                // })
+            })
+    }
+  }
+
+
+
+  modifyDisplay() {
+    const { title, imgPath, runtime, voteAve, releasedYear, overview, genres, urlSrc } = this.state
+    return (
+      <Filmdisplay
+        src= {imgPath}
+        title= {title}
+        runtime= {runtime}
+        voteAve= {voteAve}
+        releasedYear = {releasedYear}
+        overview = {overview}
+        genres= {genres}
+        urlSrc= {urlSrc}
+      />
+
+    )
+  }
 }
 
-export default Film;

@@ -107,7 +107,7 @@ export default class Latest extends React.Component {
         for (let i = 0; i < 10; i++) {
             const movie = movies[i];
             const movie_title = movie['original_title']
-            const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path']
+            const movie_image = `https://image.tmdb.org/t/p/original/` + movie['poster_path']
             const movie_grade = movie['vote_average']
             const movie_id = movie['id']
             items.push(
