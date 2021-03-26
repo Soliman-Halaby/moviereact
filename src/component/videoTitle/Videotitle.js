@@ -20,7 +20,6 @@ export default function Videotitle(props) {
             <span className="filmStyle center">{props.filmStyle}</span>
             <Rating 
               rate= {props.filmGrade}
-              diviser = {10}
             />
             <span className="rateText">
               <span>{props.filmGrade}</span>
