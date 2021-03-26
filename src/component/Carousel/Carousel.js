@@ -84,7 +84,7 @@ export default class Latest extends React.Component {
           "Content-Type": "application/json;charset=utf-8",
         },
       })
-        .then((res) => res.json())
+        .then((res) => {return res.json()})
         .then((res) => {
           this.setState({
             movies: res.results,
