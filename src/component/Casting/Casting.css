@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 .castingContainer {
-  margin: 40px 20px;
+  margin: 90px 20px;
   display: flex;
   flex-direction: column;
   font-family: "Rambla", sans-serif;
