@@ -9,6 +9,10 @@ img {
   user-select: none;
 }
 
+.underlineNone {
+  text-decoration: none;
+}
+
 .filmInfo span {
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -17,13 +21,11 @@ img {
   user-select: none;
 }
 
-
 .videoTitleContainer {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
 }
-
 
 .filmInfo {
   width: 190px;
@@ -61,6 +63,7 @@ img {
   font-family: "Righteous", cursive;
   font-size: 20px;
   min-height: 65px;
+  text-decoration: none;
 }
 
 .filmStyle,
@@ -91,5 +94,3 @@ img {
 .rateText span:first-child {
   color: #b171d9;
 }
-
-

@@ -8,11 +8,15 @@ import play from "../../assets/logos/play.svg"
 
 
 
-function Film() {
+function Film(props) {
   // console.log(useGetFilms);
+  // console.log(this.props.movieName);
+  const About =(props) => {
+    console.log("aboutRB",props.location.filmName);
+  }
   return (
-    
     <div className="containerFilm">
+      <h1>{props.movieName}</h1>
       <Header />
       <Filmdisplay
       imgSrc = {image}

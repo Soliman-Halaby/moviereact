@@ -1,6 +1,8 @@
 import React from "react";
 import "./Videotitle.css";
 import Rating from "../Rating/Rating"
+import { BrowserRouter as Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const rate = 6
 
@@ -15,7 +17,9 @@ export default function Videotitle(props) {
           src={props.src}
         ></img>
         <div class="infos center">
+        <NavLink to="/film" className="underlineNone">
           <span className="filmTitle center">{props.filmTitle}</span>
+        </NavLink>
           <div class="subcontainer">
             <span className="filmStyle center">{props.filmStyle}</span>
             <Rating 
