@@ -11,20 +11,14 @@ function Header(props) {
     <div className="header">
       <div className="headerContainer">
         <div className="logo">
-          <img className="logoImg" src={Logo} alt="test" />
+          <NavLink to="/">
+            <img className="logoImg" src={Logo} alt="test" />
+          </NavLink>
         </div>
         <div className="searchBar">
           <SearchBar />
           {/* <SearchResult /> */}
         </div>
-      </div>
-      <div className="tabs">
-        <NavLink to="/film" className="headerTabs">
-          Film
-        </NavLink>
-        <NavLink to="/" className="headerTabs">
-          Home
-        </NavLink>
       </div>
       <div className="choseType">
         <div className="elementType">

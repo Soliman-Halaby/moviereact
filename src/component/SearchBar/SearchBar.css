@@ -19,7 +19,7 @@
 
 .form__field::placeholder {
   color: #ffffff;
-  opacity: 0.1;
+  opacity: 0.5;
 }
 
 .form__field:placeholder-shown ~ .form__label {
