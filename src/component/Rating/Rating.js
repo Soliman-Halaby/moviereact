@@ -34,7 +34,6 @@ export default class Rating extends React.Component {
           rate = 0;
           items.push(<img className="star" src={starhalf}></img>);
         } else {
-          console.log("pute");
           items.push(<img className="star" src={starregular}></img>);
         }
       }
