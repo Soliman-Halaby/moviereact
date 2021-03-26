@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   font-family: "Rambla", sans-serif;
-  top: 500px;
+  top: 440px;
   color: #ffffff;
   margin-left: 20px;
 }
@@ -57,6 +57,7 @@
   max-width: 600px;
   width: 100%;
   margin-top: 10px;
+  font-size: 16px;
   text-shadow: 1px 1px 2px #000000;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .castingTitle {
-  margin-top: 25px;
+  margin-top: 50px;
   font-family: "Rambla", sans-serif;
   font-weight: 800;
 }
@@ -97,7 +98,23 @@
     font-size: 60px;
   }
 
+  .castingTitle {
+    margin-top: 110px;
+  }
   .pageFilmStyle {
     font-size: 35px;
+  }
+
+  .filmInformation {
+    top: 470px;
+  }
+}
+
+@media (max-width: 400px) {
+  .filmInformation {
+    top: 350px;
+  }
+  .castingTitle {
+    margin-top: 130px;
   }
 }
