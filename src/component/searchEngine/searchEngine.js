@@ -14,12 +14,20 @@ export default class SearchEngine extends React.Component {
         tabLen: 0,
         errors: null
     }
+
+    componentDidUpdate() {
+        const {lastString} = this.state
+        if(lastString != this.props.movieName && typeof this.props.movieName != undefined) {
+            this.fetchSearch(this.props.movieName)
+        }
+
+    }
     
     
     render() {
         const {isLoading, lastString, movies} = this.state
 
-                const responsive = {
+        const responsive = {
             0: { items: 1 },
             500: { items: 2 },
             700: { items: 3 },
@@ -47,7 +55,6 @@ export default class SearchEngine extends React.Component {
                 </React.Fragment>
             )
         } else {
-            this.fetchSearch(this.props.movieName)
             return (
                 <p>Wait, I'm Loading !</p>
             )
@@ -55,28 +62,29 @@ export default class SearchEngine extends React.Component {
     }
 
     fetchSearch(movieName) {
-        fetch(`https://api.themoviedb.org/3/search/movie?&query=${movieName}` , {
-        methods: "GET",
-        headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MmVmMTQxMTBkNmZiYzE3NDE0MTUzMzY1ZTE4NWI4MSIsInN1YiI6IjYwNTM2MDNkMGUyOWEyMDA3MzZkOGM0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K2zbw8Xr4ylJN8uZxwoYHxzx9R2d9SuZFpgDLVRIo6c",
-            "Content-Type": "application/json;charset=utf-8"
-        }})
-        .then(res => res.json())
-        .then(res => {
-            console.log(res);
-            this.setState({
-                movies: res.results,
-                tabLen: res.results.length,
-                lastString: movieName,
-                isLoading: false
+        if (typeof movieName != undefined && movieName != "") {
+            fetch(`https://api.themoviedb.org/3/search/movie?&query=${movieName}` , {
+            methods: "GET",
+            headers: {
+                Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MmVmMTQxMTBkNmZiYzE3NDE0MTUzMzY1ZTE4NWI4MSIsInN1YiI6IjYwNTM2MDNkMGUyOWEyMDA3MzZkOGM0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K2zbw8Xr4ylJN8uZxwoYHxzx9R2d9SuZFpgDLVRIo6c",
+                "Content-Type": "application/json;charset=utf-8"
+            }})
+            .then(res => res.json())
+            .then(res => {
+                this.setState({
+                    movies: res.results,
+                    tabLen: res.results.length,
+                    lastString: movieName,
+                    isLoading: false
+                })
             })
-        })
-        .catch(error => {
-            this.setState({
-                errors: error,
-                isLoading: false
+            .catch(error => {
+                this.setState({
+                    errors: error,
+                    isLoading: false
+                })
             })
-        })
+        }
     }
 
     modifyCarousel(items) {
@@ -85,9 +93,8 @@ export default class SearchEngine extends React.Component {
         if (movies != []) {
             for (let i = 0; i < tabLen; i++) {
                 const movie = movies[i];
-                // console.log(movie);
                 const movie_title = movie['original_title'];
-                const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path'];
+                const movie_image = `https://image.tmdb.org/t/p/original/` + movie['poster_path'];
                 let movie_grade = movie['vote_average'];
     
                 items.push(

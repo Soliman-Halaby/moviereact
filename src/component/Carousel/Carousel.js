@@ -48,7 +48,7 @@ export default class Latest extends React.Component {
         //     respObj.push(obj);
         //     console.log(respObj);
         // }
-       ; 
+    //    ; 
     // }
         const items = [];
 
