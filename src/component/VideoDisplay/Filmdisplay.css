@@ -27,22 +27,26 @@
   font-family: "Righteous", cursive;
   font-weight: 400;
   transition: 2s ease;
+  text-shadow: 2px 2px 5px #000000;
 }
 
 .pageFilmStyle {
   color: #b171d9;
   font-size: 48px;
   font-weight: 800;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .pageFilmDate {
   font-size: 28px;
   margin-right: 20px;
   font-weight: 800;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .pageFilmDuration {
   font-size: 20px;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .moreInfo {
@@ -53,6 +57,7 @@
   max-width: 600px;
   width: 100%;
   margin-top: 10px;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .arrowLeft {
