@@ -76,7 +76,10 @@ export default class Latest extends React.Component {
         const {isLoading} = this.state;
 
         if (isLoading) {
-            fetch(`https://api.themoviedb.org/3/movie/upcoming` , {
+            
+            const apiName = "https://api.themoviedb.org/3/movie/" + this.props.sortBy;
+
+            fetch(apiName , {
                 methods: "GET",
                 headers: {
                     Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MmVmMTQxMTBkNmZiYzE3NDE0MTUzMzY1ZTE4NWI4MSIsInN1YiI6IjYwNTM2MDNkMGUyOWEyMDA3MzZkOGM0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K2zbw8Xr4ylJN8uZxwoYHxzx9R2d9SuZFpgDLVRIo6c",
@@ -99,18 +102,13 @@ export default class Latest extends React.Component {
 
     modifyCarousel(items) {
         const handleDragStart = (e) => e.preventDefault();
-        const {movies, tab_len} = this.state;
+        const {movies} = this.state;
 
-        for (let i = 0; i < tab_len; i++) {
+        for (let i = 0; i < 10; i++) {
             const movie = movies[i];
-            console.log(movie);
-            const movie_title = movie['original_title'];
-            const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path'];
-            let movie_grade = "NR";
-
-            if(movie['vote_average'] !== 0) {
-                movie_grade = movie['vote_average'];
-            }
+            const movie_title = movie['original_title']
+            const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path']
+            const movie_grade = movie['vote_average']
             items.push(
                 <Videotitle
                     onDragStart={handleDragStart} 
