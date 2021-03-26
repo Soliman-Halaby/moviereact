@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/moviereact/static/css/main.9006ae84.chunk.css",
+    "main.css": "/moviereact/static/css/main.57696576.chunk.css",
     "main.js": "/moviereact/static/js/main.88c4711a.chunk.js",
     "main.js.map": "/moviereact/static/js/main.88c4711a.chunk.js.map",
     "runtime-main.js": "/moviereact/static/js/runtime-main.075b7af1.js",
@@ -12,7 +12,7 @@
     "static/js/3.b1a9254b.chunk.js.map": "/moviereact/static/js/3.b1a9254b.chunk.js.map",
     "index.html": "/moviereact/index.html",
     "static/css/2.af3ab7ac.chunk.css.map": "/moviereact/static/css/2.af3ab7ac.chunk.css.map",
-    "static/css/main.9006ae84.chunk.css.map": "/moviereact/static/css/main.9006ae84.chunk.css.map",
+    "static/css/main.57696576.chunk.css.map": "/moviereact/static/css/main.57696576.chunk.css.map",
     "static/js/2.3652bc0a.chunk.js.LICENSE.txt": "/moviereact/static/js/2.3652bc0a.chunk.js.LICENSE.txt",
     "static/media/arrowLeft.af031bd7.svg": "/moviereact/static/media/arrowLeft.af031bd7.svg",
     "static/media/externalLinkImg.6235632c.svg": "/moviereact/static/media/externalLinkImg.6235632c.svg",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.075b7af1.js",
     "static/css/2.af3ab7ac.chunk.css",
     "static/js/2.3652bc0a.chunk.js",
-    "static/css/main.9006ae84.chunk.css",
+    "static/css/main.57696576.chunk.css",
     "static/js/main.88c4711a.chunk.js"
   ]
 }
