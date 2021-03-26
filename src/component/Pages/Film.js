@@ -26,14 +26,17 @@ export default class Film extends React.Component {
     return (
       <React.Fragment>
         {this.modifyDisplay()}
-        <div className="castingWrap">
-          <Casting />
-          <Casting />
-          <Casting />
-          <Casting />
-          <Casting />
-          <Casting />
-          <Casting />
+        <div className="containerCasting">
+          <span className="castingTitle">Casting</span>
+          <div className="castingWrap">
+            <Casting />
+            <Casting />
+            <Casting />
+            <Casting />
+            <Casting />
+            <Casting />
+            <Casting />
+          </div>
         </div>
       </React.Fragment>
     );

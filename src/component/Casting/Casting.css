@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 .castingContainer {
-  margin: 90px 20px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   font-family: "Rambla", sans-serif;
@@ -32,6 +32,11 @@
   flex-wrap: wrap;
 }
 
+.castingTitle {
+  color: #ffffff;
+  font-size: 35px;
+}
+
 @media (max-width: 1200px) {
   .castingImg {
     width: 90px;
@@ -47,13 +52,13 @@
   }
   .castingWrap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 30px 0px;
   }
 
   .castingImg {
-    width: 60px;
-    height: 40px;
+    width: 70px;
+    height: 60px;
   }
 
   .actorName,
