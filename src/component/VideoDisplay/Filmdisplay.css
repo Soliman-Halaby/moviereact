@@ -1,64 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Rambla&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.container{
-    margin-top:-50px;
+.filmDisplay {
+  display: flex;
+  flex-direction: column;
 }
-.imgContainer{
-    display: flex;
-    justify-content: center;
-    
+
+.filmImage {
+  object-fit: cover;
+  height: 100vh;
 }
-.trailer{
-    width: 100%;
-    height: auto;
+
+.filmInformation {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rambla", sans-serif;
+  top: 500px;
+  color: #ffffff;
+  margin-left: 20px;
 }
-.svgButton{
-    position: absolute;
-    left:45%;
-    top:45%;
+
+.pageFilmTitle {
+  color: #ffffff;
+  font-size: 140px;
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  transition: 2s ease;
 }
-.svgButton:hover{
-    cursor: pointer;
-    /* transform: scale(1.05);
-    transition: linear 0.2s; */
+
+.pageFilmStyle {
+  color: #b171d9;
+  font-size: 48px;
+  font-weight: 800;
 }
-.description{
-    width:35vw;
-    height:55vh;
-    border: 1px solid black;
-    color:white;
-    position:absolute;
-    top:65%;
-    left: 5%;
+
+.pageFilmDate {
+  font-size: 28px;
+  margin-right: 20px;
+  font-weight: 800;
 }
-.filmTitle1{
-     font-size: 144px; 
-     font-family: 'Righteous', sans-serif;
-    margin-top:-40px; 
+
+.pageFilmDuration {
+  font-size: 20px;
 }
-.genre{
-    font-family: 'Rambla', sans-serif;
-    color:#B171D9;
-    font-size:37px;
-    margin-top: -130px;
+
+.moreInfo {
+  width: 300px;
 }
-.infos{
-    font-family: 'Rambla', sans-serif;
-    width:150px;
-    display: flex;
-    justify-content: space-around;
-    margin-top:-35px;
+
+.pageFilmDescription {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 10px;
 }
-.year{
-    font-weight: bold;
-    font-size:22px;
-    margin-left:-15px; 
-    margin-top:2px;  
+
+.arrowLeft {
+  width: 40px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
 }
-.length{
-    font-size:12px;
-    margin-top:9px;
+
+.starContainer {
+  display: flex;
+  /* justify-content: flex-start; */
+  /* height: 30px; */
 }
-.descriptionText{
-    font-family: 'Rambla', sans-serif;
+
+.styleRate {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }

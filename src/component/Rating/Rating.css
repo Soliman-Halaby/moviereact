@@ -1,7 +1,12 @@
-.starContainer {
+.ratingcenter {
   display: flex;
   justify-content: center;
   /* height: 30px; */
+}
+
+.ratingStart {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .star {
