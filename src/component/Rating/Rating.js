@@ -21,9 +21,7 @@ export default class Rating extends React.Component {
     starRate(grade) {
         const items = [];
         let rate = grade
-        console.log(rate);
         if( rate === 0) {
-            console.log("Hello");
             for (let i = 0; i < 5; i++) {
                 items.push (
                     <img className= 'staroflife' src= {staroflife} alt="not rated"></img>
