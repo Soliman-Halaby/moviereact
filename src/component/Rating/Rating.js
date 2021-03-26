@@ -26,7 +26,6 @@ export default class Rating extends React.Component {
       }
     } else {
       for (let i = 0; i < 5; i++) {
-        console.log(rate);
         if (rate >= 1) {
           items.push(<img className="star" src={starsolid}></img>);
           rate = rate - 1;
