@@ -73,3 +73,20 @@
   flex-direction: row;
   align-content: center;
 }
+
+.externalLink {
+  width: 30px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+@media (max-width: 1050px) {
+  .pageFilmTitle {
+    font-size: 60px;
+  }
+
+  .pageFilmStyle {
+    font-size: 35px;
+  }
+}
