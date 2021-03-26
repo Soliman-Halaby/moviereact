@@ -118,6 +118,9 @@ button {
 }
 
 @media (max-width: 650px) {
+  .logo {
+    margin: 10px;
+  }
   .logoImg {
     display: flex;
   }
@@ -130,7 +133,7 @@ button {
     font-size: 10px;
   }
   .inputContainer {
-    margin-left: 35px;
+    margin-left: 0px;
     display: flex;
     justify-content: center;
     /* margin-top: 60px; */
