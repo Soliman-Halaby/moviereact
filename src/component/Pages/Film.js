@@ -3,12 +3,7 @@ import React from "react";
 import Filmdisplay from "../VideoDisplay/Filmdisplay";
 import "./Film.css";
 // import video1 from "../../assets/videos/banana.mp4";
-import image from "../../assets/images/image.png";
-import play from "../../assets/logos/play.svg";
-import FilmImage from "../../assets/images/image.png";
-
-
-
+import Casting from "../Casting/CastingComponent";
 export default class Film extends React.Component {
   state = {
     isLoading: true,
@@ -19,19 +14,28 @@ export default class Film extends React.Component {
     releasedYear: 6666,
     overview: "",
     genres: "",
-    urlSrc: ""
-  }
+    urlSrc: "",
+  };
 
   componentDidMount() {
     this.fetchMovies();
   }
 
   render() {
-    const { propsId } = this.state
-    console.log(propsId['movieId']);
+    const { propsId } = this.state;
+    console.log(propsId["movieId"]);
     return (
       <React.Fragment>
         {this.modifyDisplay()}
+        <div className="castingWrap">
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+        </div>
       </React.Fragment>
     );
   }
@@ -40,53 +44,62 @@ export default class Film extends React.Component {
     const { isLoading, propsId } = this.state;
 
     if (isLoading) {
-        
-        const apiName = "https://api.themoviedb.org/3/movie/" + propsId['movieId'];
-        const imgPath = "https://image.tmdb.org/t/p/original/"
+      const apiName =
+        "https://api.themoviedb.org/3/movie/" + propsId["movieId"];
+      const imgPath = "https://image.tmdb.org/t/p/original/";
 
-        fetch(apiName , {
-            methods: "GET",
-            headers: {
-                Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MmVmMTQxMTBkNmZiYzE3NDE0MTUzMzY1ZTE4NWI4MSIsInN1YiI6IjYwNTM2MDNkMGUyOWEyMDA3MzZkOGM0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K2zbw8Xr4ylJN8uZxwoYHxzx9R2d9SuZFpgDLVRIo6c",
-                "Content-Type": "application/json;charset=utf-8"
-            }}).then(res => res.json())
-            .then(res => {
-                const genresTab = res.genres[0]
-                console.log(genresTab.name);
-                this.setState({
-                  title: res.original_title,
-                  imgPath: imgPath + res.backdrop_path,
-                  runtime: res.runtime,
-                  voteAve: res.vote_average,
-                  releasedYear: res.release_date.substring(0, 4),
-                  overview: res.overview,
-                  genres: genresTab.name,
-                  urlSrc: res.homepage
-                })
-            }).catch(error => {
-                // this.setState({
-                // })
-            })
+      fetch(apiName, {
+        methods: "GET",
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MmVmMTQxMTBkNmZiYzE3NDE0MTUzMzY1ZTE4NWI4MSIsInN1YiI6IjYwNTM2MDNkMGUyOWEyMDA3MzZkOGM0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K2zbw8Xr4ylJN8uZxwoYHxzx9R2d9SuZFpgDLVRIo6c",
+          "Content-Type": "application/json;charset=utf-8",
+        },
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          const genresTab = res.genres[0];
+          console.log(genresTab.name);
+          this.setState({
+            title: res.original_title,
+            imgPath: imgPath + res.backdrop_path,
+            runtime: res.runtime,
+            voteAve: res.vote_average,
+            releasedYear: res.release_date.substring(0, 4),
+            overview: res.overview,
+            genres: genresTab.name,
+            urlSrc: res.homepage,
+          });
+        })
+        .catch((error) => {
+          // this.setState({
+          // })
+        });
     }
   }
 
-
-
   modifyDisplay() {
-    const { title, imgPath, runtime, voteAve, releasedYear, overview, genres, urlSrc } = this.state
+    const {
+      title,
+      imgPath,
+      runtime,
+      voteAve,
+      releasedYear,
+      overview,
+      genres,
+      urlSrc,
+    } = this.state;
     return (
       <Filmdisplay
-        src= {imgPath}
-        title= {title}
-        runtime= {runtime}
-        voteAve= {voteAve}
-        releasedYear = {releasedYear}
-        overview = {overview}
-        genres= {genres}
-        urlSrc= {urlSrc}
+        src={imgPath}
+        title={title}
+        runtime={runtime}
+        voteAve={voteAve}
+        releasedYear={releasedYear}
+        overview={overview}
+        genres={genres}
+        urlSrc={urlSrc}
       />
-
-    )
+    );
   }
 }
-

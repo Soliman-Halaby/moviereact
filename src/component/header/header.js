@@ -1,10 +1,8 @@
 import React from "react";
 import "./header.css";
 import Logo from "../../assets/logos/logo.svg";
-import { BrowserRouter as Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import { NavLink } from "react-router-dom";
-import SearchResult from "../SearchBar/searchResult";
 // import logo from '../../assets/logos/logo.png;';
 // import iconHeart from './images/heart-red.svg';
 
