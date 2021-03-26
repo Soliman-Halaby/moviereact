@@ -125,7 +125,7 @@ button {
     display: flex;
   }
   .headerContainer {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .element {
@@ -147,5 +147,11 @@ button {
     margin-top: 0;
     height: 55%;
     display: flex;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo {
+    height: 0px;
   }
 }

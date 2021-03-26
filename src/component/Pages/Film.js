@@ -3,7 +3,6 @@ import React from "react";
 import Filmdisplay from "../VideoDisplay/Filmdisplay";
 import "./Film.css";
 // import video1 from "../../assets/videos/banana.mp4";
-import Casting from "../Casting/CastingComponent";
 export default class Film extends React.Component {
   state = {
     isLoading: true,
