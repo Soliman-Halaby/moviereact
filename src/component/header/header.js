@@ -4,7 +4,7 @@ import Logo from "../../assets/logos/logo.svg";
 import { BrowserRouter as Link } from "react-router-dom";
 import SearchBar from "..//SearchBar/SearchBar";
 import { NavLink } from "react-router-dom";
-
+import SearchResult from "../SearchBar/searchResult";
 // import logo from '../../assets/logos/logo.png;';
 // import iconHeart from './images/heart-red.svg';
 
@@ -17,16 +17,17 @@ function Header(props) {
         </div>
         <div className="searchBar">
           <SearchBar />
+          {/* <SearchResult /> */}
         </div>
       </div>
-      {/* <div className="tabs">
+      <div className="tabs">
         <NavLink to="/film" className="headerTabs">
           Film
         </NavLink>
         <NavLink to="/" className="headerTabs">
           Home
         </NavLink>
-      </div> */}
+      </div>
       <div className="choseType">
         <div className="elementType">
           <button class="element select">

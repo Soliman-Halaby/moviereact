@@ -2,6 +2,8 @@ import React from "react";
 import "./Videotitle.css";
 import Rating from "../Rating/Rating"
 
+const rate = 6
+
 export default function Videotitle(props) {
   return (
     <div className="videoTitleContainer">

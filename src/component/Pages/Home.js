@@ -1,9 +1,7 @@
 import React from "react";
 import Header from "../header/header";
 import Footer from "../Footer/footer";
-import Popular from "./PopularMovies"
-import Top from "./TopMovies"
-import Latest from "./LatestMovies"
+import Carousel from "../Carousel/Carousel"
 import "./Home.css";
 
 export default function Home() {
@@ -12,20 +10,26 @@ export default function Home() {
       <Header />
       <div className="filmPart">
         <span className="titleCategorie">Nouveauté</span>
-          <Latest />
+          <Carousel 
+            sortBy= {"upcoming"}
+          />
         <div className="videoWrapper">
         </div>
       </div>
       <div className="filmPart">
         <span className="titleCategorie">Top 10</span>
         <div className="videoWrapper">
-          <Top />
+          <Carousel 
+            sortBy= {"top_rated"}
+          />
         </div>
       </div>
       <div className="filmPart">
         <span className="titleCategorie">Populaire</span>
         <div className="videoWrapper">
-          <Popular />
+          <Carousel 
+            sortBy= {"popular"}
+          />
         </div>
       </div>
       <Footer />

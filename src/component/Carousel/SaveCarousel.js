@@ -4,7 +4,7 @@ import Videotitle from "../videoTitle/Videotitle";
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 
-export default class Top extends React.Component {
+export default class Latest extends React.Component {
     state = {
       isLoading: true,
       movies: [],
@@ -20,7 +20,10 @@ export default class Top extends React.Component {
         const {isLoading} = this.state;
         const responsive = {
             0: { items: 1 },
-            500: { items: 2 },
+            340: { items: 1},
+            350: { items: 1.7 },
+            420: { items: 1.9 },
+            500: { items: 1.9 },
             700: { items: 3 },
             900: { items: 4 }, // number of items per resolution 
             1100: { items: 5 }, 
@@ -30,6 +33,23 @@ export default class Top extends React.Component {
             2000: { items: 9 }, 
             2200: { items: 10 }, 
         };
+
+        // const respObj = [];
+        // const respItems = 1.7
+        // const respKey = 350
+        // const respLimite = 3000
+        // const restStep = 50
+
+        // for ( var i=0; i<(respLimite/restStep); i++ ) {
+        //     const key3 = respKey + (i*((respLimite-respItems)/restStep))
+        //     var obj = {};
+
+        //     obj[key3] = "value3";
+        //     respObj.push(obj);
+        //     console.log(respObj);
+        // }
+       ; 
+    // }
         const items = [];
 
         if (!isLoading) {
@@ -56,7 +76,7 @@ export default class Top extends React.Component {
         const {isLoading} = this.state;
 
         if (isLoading) {
-            fetch(`https://api.themoviedb.org/3/movie/top_rated` , {
+            fetch(`https://api.themoviedb.org/3/movie/upcoming` , {
                 methods: "GET",
                 headers: {
                     Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MmVmMTQxMTBkNmZiYzE3NDE0MTUzMzY1ZTE4NWI4MSIsInN1YiI6IjYwNTM2MDNkMGUyOWEyMDA3MzZkOGM0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.K2zbw8Xr4ylJN8uZxwoYHxzx9R2d9SuZFpgDLVRIo6c",
@@ -79,13 +99,14 @@ export default class Top extends React.Component {
 
     modifyCarousel(items) {
         const handleDragStart = (e) => e.preventDefault();
-        const {movies} = this.state;
+        const {movies, tab_len} = this.state;
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < tab_len; i++) {
             const movie = movies[i];
-            const movie_title = movie['original_title']
-            const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path']
-            const movie_grade = movie['vote_average']
+            const movie_title = movie['original_title'];
+            const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path'];
+            let movie_grade = movie['vote_average'];
+
             items.push(
                 <Videotitle
                     onDragStart={handleDragStart} 
