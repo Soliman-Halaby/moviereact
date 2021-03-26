@@ -8,7 +8,7 @@ export default class Latest extends React.Component {
     state = {
       isLoading: true,
       movies: [],
-      tab_len: 0,
+      tabLen: 0,
       errors : null
     }
     
@@ -88,7 +88,7 @@ export default class Latest extends React.Component {
                 .then(res => {
                     this.setState({
                         movies: res.results,
-                        tab_len: res.results.length,
+                        tabLen: res.results.length,
                         isLoading: false
                     })
                 }).catch(error => {
@@ -109,6 +109,7 @@ export default class Latest extends React.Component {
             const movie_title = movie['original_title']
             const movie_image = `https://image.tmdb.org/t/p/w500/` + movie['poster_path']
             const movie_grade = movie['vote_average']
+            const movie_id = movie['id']
             items.push(
                 <Videotitle
                     onDragStart={handleDragStart} 
@@ -118,6 +119,7 @@ export default class Latest extends React.Component {
                     filmStyle= "Action" // Need to be modified
                     filmGrade= {movie_grade}
                     onTen= "/10"
+                    movieId= {movie_id}
                     />
             )
         }

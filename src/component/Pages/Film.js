@@ -6,12 +6,14 @@ import "./Film.css";
 import image from "../../assets/images/image.png";
 import play from "../../assets/logos/play.svg";
 
-function Film() {
-  // console.log(useGetFilms);
-  // console.log(this.props.movieName);
-  const About = (props) => {
-    console.log("aboutRB", props.location.filmName);
-  };
+
+
+function Film(props) {
+  const propsId = props.filmId
+  console.log(propsId['movieId']);
+  const About =(props) => {
+    console.log("aboutRB",props.location.filmName);
+  }
   return (
     <div className="containerFilm">
       {/* <Header /> */}
