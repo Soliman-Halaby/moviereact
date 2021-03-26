@@ -2,12 +2,28 @@ import React from "react";
 import Header from "../header/header";
 import Footer from "../Footer/footer";
 import Carousel from "../Carousel/Carousel"
+import Genres from "../header/Genres";
+import Search from "../header/Search";
 import "./Home.css";
 
 export default function Home() {
+  
   return (
     <div className="containerHome">
-      <Header />
+      <Header 
+        // props={}
+      />
+      {/* <Search /> */}
+      <Genres />
+      
+      <div className="filmPart">
+        <span className="titleCategorie">Recherche</span>
+          <Carousel 
+            sortBy= {"upcoming"}
+          />
+        <div className="videoWrapper">
+        </div>
+      </div>
       <div className="filmPart">
         <span className="titleCategorie">Nouveauté</span>
           <Carousel 

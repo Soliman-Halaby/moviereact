@@ -11,3 +11,29 @@
   font-weight: 700;
   font-size: 35px;
 }
+
+.containerHome {
+  overflow: hidden;
+}
+
+.searchBar .alice-carousel__wrapper {
+  background: #0b0b0d;
+  top: 525px;
+  left: 120px;
+  margin-bottom: 10px;
+  z-index: 20;
+}
+
+.searchBar .alice-carousel__wrapper::after {
+  content: "";
+  background: red;
+  height: 500px;
+  width: 300px;
+}
+
+.searchBar .alice-carousel__stage {
+}
+
+.alice-carousel__stage-item {
+  width: 220px !important;
+}

@@ -89,27 +89,27 @@ export default class SearchEngine extends React.Component {
 
     modifyCarousel(items) {
         const handleDragStart = (e) => e.preventDefault();
-        const {movies, tabLen} = this.state;
-        if (movies != []) {
-            for (let i = 0; i < tabLen; i++) {
-                const movie = movies[i];
-                const movie_title = movie['original_title'];
-                const movie_image = `https://image.tmdb.org/t/p/original/` + movie['poster_path'];
-                let movie_grade = movie['vote_average'];
-                const movie_id = movie['id'];
-                items.push(
-                    <Videotitle
-                        onDragStart={handleDragStart} 
-                        src= {movie_image}
-                        alt= {movie_title}
-                        filmTitle= {movie_title}
-                        filmStyle= "Action" // Need to be modified
-                        filmGrade= {movie_grade}
-                        onTen= "/10"
-                        movieId= {movie_id}
-                        />
-                )
-            }
+        const { movies } = this.state;
+
+        for (let i = 0; i < 10; i++) {
+          const movie = movies[i];
+          const movie_title = movie["original_title"];
+          const movie_image =
+            `https://image.tmdb.org/t/p/original/` + movie["poster_path"];
+          const movie_grade = movie["vote_average"];
+          const movie_id = movie["id"];
+          items.push(
+            <Videotitle
+              onDragStart={handleDragStart}
+              src={movie_image}
+              alt={movie_title}
+              filmTitle={movie_title}
+              filmStyle="Action" // Need to be modified
+              filmGrade={movie_grade}
+              onTen="/10"
+              movieId={movie_id}
+            />
+          );
         }
     }
 }
