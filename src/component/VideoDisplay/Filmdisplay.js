@@ -5,6 +5,7 @@ import ArrowLeft from "../../assets/images/arrowLeft.svg";
 import Rating from "../Rating/Rating";
 import "./Filmdisplay.css";
 import extLinkImg from "../../assets/images/externalLinkImg.svg";
+import Casting from "../Casting/CastingComponent";
 export default function Filmdisplay(props) {
   return (
     <div className="filmDisplay">
@@ -28,6 +29,16 @@ export default function Filmdisplay(props) {
           <span className="pageFilmDuration">{props.runtime} minutes</span>
         </div>
         <span className="pageFilmDescription">{props.overview}</span>
+        <span className="castingTitle">Casting</span>
+        <div className="castingWrap">
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+          <Casting />
+        </div>
       </div>
     </div>
   );

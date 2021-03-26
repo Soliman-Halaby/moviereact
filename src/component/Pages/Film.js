@@ -23,23 +23,7 @@ export default class Film extends React.Component {
 
   render() {
     const { propsId } = this.state;
-    return (
-      <React.Fragment>
-        {this.modifyDisplay()}
-        <div className="containerCasting">
-          <span className="castingTitle">Casting</span>
-          <div className="castingWrap">
-            <Casting />
-            <Casting />
-            <Casting />
-            <Casting />
-            <Casting />
-            <Casting />
-            <Casting />
-          </div>
-        </div>
-      </React.Fragment>
-    );
+    return <React.Fragment>{this.modifyDisplay()}</React.Fragment>;
   }
 
   fetchMovies() {

@@ -86,6 +86,12 @@
   right: 25px;
 }
 
+.castingTitle {
+  margin-top: 25px;
+  font-family: "Rambla", sans-serif;
+  font-weight: 800;
+}
+
 @media (max-width: 1150px) {
   .pageFilmTitle {
     font-size: 60px;
