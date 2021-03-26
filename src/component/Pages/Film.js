@@ -7,7 +7,7 @@ import Casting from "../Casting/CastingComponent";
 export default class Film extends React.Component {
   state = {
     isLoading: true,
-    propsId: this.props.filmId,
+    propsId: this.props.match.params.id,
     imgPath: "",
     runtime: 0,
     voteAve: 0,
@@ -23,7 +23,6 @@ export default class Film extends React.Component {
 
   render() {
     const { propsId } = this.state;
-    console.log(propsId["movieId"]);
     return (
       <React.Fragment>
         {this.modifyDisplay()}
@@ -44,8 +43,7 @@ export default class Film extends React.Component {
     const { isLoading, propsId } = this.state;
 
     if (isLoading) {
-      const apiName =
-        "https://api.themoviedb.org/3/movie/" + propsId["movieId"];
+      const apiName = "https://api.themoviedb.org/3/movie/" + propsId;
       const imgPath = "https://image.tmdb.org/t/p/original/";
 
       fetch(apiName, {

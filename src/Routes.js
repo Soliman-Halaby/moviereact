@@ -5,21 +5,12 @@ import Home from "./component/Pages/Home";
 
 export default function Router(props) {
   let location = useLocation();
-  const movie_id = location.userProps;
-  const movie_path = "/film/";
+  const movie_path = "/film/:id";
   // Create different Route depending on the path
   return (
     <Switch>
-      <Route
-        path={movie_path}
-        component={() => <Film filmId={location.userProps} />}
-      />
-      {/* <Route path="/film" component={props.movieName}>
-        <Film />
-      </Route> */}
-      <Route path="/" exact={true}>
-        <Home />
-      </Route>
+      <Route path={movie_path} component={Film} exact={true} />
+      <Route path="/" exact={true} component={Home}></Route>
     </Switch>
   );
 }
